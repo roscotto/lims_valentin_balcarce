@@ -18,3 +18,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+// Ruta a sandbox para pruebas de backend
+Route::get('/sandbox', [HomeController::class, 'sandbox'])->name('sandbox');
