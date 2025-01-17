@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('parametros', function (Blueprint $table) {
             $table->id('parametro_id');
+            $table->string('parametro');
+            $table->decimal('valor_min', 10, 4)->nullable();
+            $table->decimal('valor_max', 10, 4)->nullable();
+            $table->string('referencia')->nullable();
+            $table->string('valor')->nullable();
+            $table->decimal('categoria_de_parametro_id', 10, 0)->nullable();
+            //$table->foreignId('categoria_de_parametro_id')->constrained('categorias_de_parametros');
             $table->timestamps();
         });
     }

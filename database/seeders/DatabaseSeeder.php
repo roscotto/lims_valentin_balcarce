@@ -26,5 +26,6 @@ class DatabaseSeeder extends Seeder
         $this->call([TiposDeEventosSeeder::class]);
         $this->call([CategoriasDeParametrosSeeder::class]);
         $this->call([CategoriasDeProductosSeeder::class]);
+        $this->call([ParametrosSeeder::class]);
     }
 }

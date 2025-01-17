@@ -32,3 +32,5 @@ class CategoriasDeProductosSeeder extends Seeder
         ]);
     }
 }
+
+
