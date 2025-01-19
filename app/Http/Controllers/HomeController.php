@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function sandbox()
     {
-        return view('sandbox');
+        return view('sandbox.sandbox');
     }
-    
+
 }
