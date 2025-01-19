@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id('producto_id');
             $table->string('nombre');
+            $table->unsignedInteger('categoria_de_producto_id')->foreign('categoria_de_producto_id')->references('categoria_de_producto_id')->on('categorias_de_productos')->ondelete('restrict')->onupdate('cascade');
             $table->timestamps();
         });
     }
