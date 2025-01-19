@@ -22,22 +22,28 @@
         <thead>
           <tr>
             <th style="border: 1px solid black; padding: 5px;">N° de producto</th>
-            <th style="border: 1px solid black; padding: 5px;">Nombre</th>
             <th style="border: 1px solid black; padding: 5px;">Categoría</th>
             <th style="border: 1px solid black; padding: 5px;">Proveedor</th>
+            <th style="border: 1px solid black; padding: 5px;">Nombre</th>
+            <th style="border: 1px solid black; padding: 5px;">Parámetros</th>
           </tr>
         </thead>
         <tbody>
           @foreach($productos as $producto)
             <tr>
               <td style="border: 1px solid black; padding: 5px;">{{ $producto->producto_id }}</td>
-              <td style="border: 1px solid black; padding: 5px;">{{ $producto->nombre }}</td>
               <td style="border: 1px solid black; padding: 5px;">{{ $producto->categoria->categoria_de_producto }}</td>
               <td style="border: 1px solid black; padding: 5px;">
                 @foreach($producto->proveedores as $proveedor)
                   <p style="margin: 0;">{{ $proveedor->nombre }}</p>
                 @endforeach
               </td>
+              <td style="border: 1px solid black; padding: 5px;">{{ $producto->nombre }}</td>
+              <td style="border: 1px solid black; padding: 5px;">
+                @foreach($producto->parametros as $parametro)
+                  <p style="margin: 0;"> {{ $parametro->parametro }} ({{ $parametro->valor_min }} - {{ $parametro->valor_max }}) - {{ $parametro->referencia }} - {{ $parametro->valor }} </p>
+
+                @endforeach
             </tr>
           @endforeach
         </tbody>

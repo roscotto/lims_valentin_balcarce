@@ -29,4 +29,18 @@ class Producto extends Model
           'proveedor_id' //  "relatedKey" Modelo con el que se relaciona
         );
     }
+
+    // Relación de muchos a muchos entre la tabla productos y la tabla parametros
+    public function parametros()
+    {
+        return $this->belongsToMany(
+          Parametro::class,
+          'parametros_x_producto', // Nombre de la tabla intermedia
+          'producto_id', // foreignPivotKey (este Modelo en la pivot)
+          'parametro_id', //  "relatedPivotKey" Modelo con el que se relaciona
+          'producto_id', // "parentKey" este Modelo
+          'parametro_id' //  "relatedKey" Modelo con el que se relaciona
+        );
+    }
+
 }

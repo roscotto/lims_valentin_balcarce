@@ -15,8 +15,8 @@ return new class extends Migration
           $table->id();
           $table->unsignedBigInteger('proveedor_id');
           $table->unsignedBigInteger('producto_id');
-          $table->foreign('proveedor_id')->references('proveedor_id')->on('proveedores')->onDelete('cascade');
-          $table->foreign('producto_id')->references('producto_id')->on('productos')->onDelete('cascade');
+          $table->foreign('proveedor_id')->references('proveedor_id')->on('proveedores')->onDelete('restrict')->onUpdate('cascade');
+          $table->foreign('producto_id')->references('producto_id')->on('productos')->onDelete('restrict')->onUpdate('cascade');
           $table->timestamps();
           $table->charset = 'utf8mb4';
           $table->collation = 'utf8mb4_unicode_ci';

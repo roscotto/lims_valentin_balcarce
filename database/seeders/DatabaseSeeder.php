@@ -21,11 +21,11 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([ProveedoresSeeder::class]);
-        $this->call([ProductosSeeder::class]);
+        $this->call([ParametrosSeeder::class]);
         $this->call([MetodosDeAnalisisSeeder::class]);
+        $this->call([ProductosSeeder::class]);
         $this->call([TiposDeEventosSeeder::class]);
         $this->call([CategoriasDeParametrosSeeder::class]);
         $this->call([CategoriasDeProductosSeeder::class]);
-        $this->call([ParametrosSeeder::class]);
     }
 }
