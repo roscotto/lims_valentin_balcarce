@@ -9,6 +9,9 @@ class Producto extends Model
     // Nombre de la tabla
     protected $table = 'productos';
 
+    
+    protected $primaryKey = 'producto_id';
+
     // RELACIONES
 
     // Relación de uno a muchos inversa entre la tabla productos y la tabla categorias_de_productos

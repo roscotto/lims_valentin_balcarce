@@ -17,16 +17,19 @@ class Parametro extends Model
    * @return Atribute $value
    */
   public function valorMin() : Attribute
-  {
-    return Attribute::make (
-      function ($value) {
-        return rtrim(rtrim($value, '0'), '.');
-      },
-      function ($value) {
-        return $value;
-      }
+{
+    return Attribute::make(
+        // Obtener el valor procesado
+        function ($value) {
+            // Si $value es null, devuelve null directamente, de lo contrario, procesa el valor
+            return $value !== null ? rtrim(rtrim((string) $value, '0'), '.') : null;
+        },
+        // Establecer el valor (sin cambios)
+        function ($value) {
+            return $value;
+        }
     );
-  }
+}
 
   /**
    * Método que devuelve los valores MÁXIMOS quitando los ceros a la derecha del número decimal
@@ -36,12 +39,25 @@ class Parametro extends Model
   public function valorMax() : Attribute
   {
     return Attribute::make (
-      function ($value) {
-        return rtrim(rtrim($value, '0'), '.');
+       // Obtener el valor procesado
+       function ($value) {
+          // Si $value es null, devuelve null directamente, de lo contrario, procesa el valor
+          return $value !== null ? rtrim(rtrim((string) $value, '0'), '.') : null;
       },
+      // Establecer el valor (sin cambios)
       function ($value) {
-        return $value;
+          return $value;
       }
     );
   }
+
+
+   // RELACIONES
+
+    // Relación de uno a muchos inversa entre la tabla parametros y la tabla categorias_de_parametros
+    public function categoria()
+    {
+        return $this->belongsTo(CategoriaDeParametro::class, 'categoria_de_parametro_id', 'categoria_de_parametro_id');
+    }
+
 }
