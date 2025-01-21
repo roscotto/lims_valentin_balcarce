@@ -9,7 +9,7 @@ class Producto extends Model
     // Nombre de la tabla
     protected $table = 'productos';
 
-    
+    // Nombre de la llave primaria
     protected $primaryKey = 'producto_id';
 
     // RELACIONES

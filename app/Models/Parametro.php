@@ -10,6 +10,8 @@ class Parametro extends Model
   // Nombre de la tabla
   protected $table = 'parametros';
 
+  // Nombre de la llave primaria
+  protected $primaryKey = 'parametro_id';
 
   /**
    * Método que devuelve los valores MÍNIMOS quitando los ceros a la derecha del número decimal
