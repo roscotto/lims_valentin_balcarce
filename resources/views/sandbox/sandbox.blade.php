@@ -18,6 +18,36 @@
 
       <hr style="margin: 25px 0px;">
 
+      <h2>Parametros juntos</h2>
+
+      <p>{{ $productoDeterminado->nombre }}</p>
+
+      {{-- @foreach($productoDeterminado->parametros as $parametro)
+        <p>{{ $parametro->parametro }} - @if($parametro->valor_min){{ $parametro->valor_min }} -@endif @if($parametro->valor_max){{ $parametro->valor_max }}@endif @if($parametro->valor){{ $parametro->valor }} - @endif @if($parametro->referencia) {{ $parametro->referencia }}@endif </p>
+      @endforeach --}}
+
+      <table border="1" style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr>
+                <th>Determinaciones</th>
+                <th>Parametro</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($productoDeterminado->parametros as $parametro)
+            <tr>
+                <td>{{ $parametro->parametro }}</td>
+                <td>{{ $parametro->valor_min ?? '' }}
+                    {{ $parametro->valor_max ?? '' }}
+                    {{ $parametro->valor ?? '' }}
+                    {{ $parametro->referencia ?? '' }}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+
+
       <h2>Lista de productos</h2>
 
       <table style="border-collapse: collapse; width: 60%; text-align: center; border: 1px solid black;">
