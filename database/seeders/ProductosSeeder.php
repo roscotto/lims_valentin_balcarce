@@ -790,6 +790,20 @@ class ProductosSeeder extends Seeder
         ['producto_id' => 47, 'parametro_id' => 170],
         ['producto_id' => 50, 'parametro_id' => 170],
         ['producto_id' => 56, 'parametro_id' => 170],
+        ['producto_id' => 40, 'parametro_id' => 173],
+        ['producto_id' => 40, 'parametro_id' => 174],
+        ['producto_id' => 40, 'parametro_id' => 175],
+        ['producto_id' => 40, 'parametro_id' => 176],
+        ['producto_id' => 40, 'parametro_id' => 177],
+        ['producto_id' => 40, 'parametro_id' => 178],
+        ['producto_id' => 40, 'parametro_id' => 179],
+        ['producto_id' => 40, 'parametro_id' => 180],
+        ['producto_id' => 40, 'parametro_id' => 181],
+        ['producto_id' => 40, 'parametro_id' => 182],
+        ['producto_id' => 40, 'parametro_id' => 183],
+        ['producto_id' => 40, 'parametro_id' => 184],
+        ['producto_id' => 40, 'parametro_id' => 185]
+
       ]);
     }
 }
