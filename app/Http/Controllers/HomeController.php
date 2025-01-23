@@ -33,7 +33,7 @@ class HomeController extends Controller
       // Listado de métodos de análisis
       $metodos = \App\Models\MetodoDeAnalisis::all();
 
-      $productoDeterminado = $this->getMetodosPorParametrosdeProducto(10);
+      $productoDeterminado = $this->getMetodosPorParametrosdeProducto(40);
 
         return view('sandbox.sandbox', [
             'productos' => $productos,
@@ -482,6 +482,27 @@ class HomeController extends Controller
         }
 
         return $producto;
+    }
+
+
+    /**
+     * Retorna la vista de login
+     * @return \Illuminate\View\View
+     */
+    public function login()
+    {
+        return view('login');
+    }
+
+
+    /**
+     * Retorna la vista de la página principal del sistema
+     * "Módulo de Carga"
+     * @return \Illuminate\View\View
+     */
+    public function moduloDeCarga()
+    {
+        return view('modulo-de-carga');
     }
 }
 
