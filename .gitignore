@@ -20,3 +20,8 @@ yarn-error.log
 /.idea
 /.vscode
 /.zed
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
