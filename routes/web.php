@@ -25,3 +25,5 @@ require __DIR__.'/auth.php';
 // Ruta a sandbox para pruebas de backend
 Route::get('/sandbox', [HomeController::class, 'sandbox'])->name('sandbox');
 Route::get('/analisis/pre-analisis', [AnalisisController::class, 'preAnalisisForm'])->name('preAnalisis');
+Route::post('/analisis/pre-analisis', [AnalisisController::class, 'preAnalisisFormAction'])->name('preAnalisisAction');
+Route::get('/analisis/carga-datos-analisis', [AnalisisController::class, 'cargaDatosAnalisis'])->name('cargaDatosAnalisis');
