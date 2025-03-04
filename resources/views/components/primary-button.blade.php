@@ -15,8 +15,8 @@
       tracking-widest
       hover:bg-naranja_50
       hover:text-white
-      focus:bg-gray-700
       active:bg-naranja_primario
+      focus:bg-naranja_primario
       focus:outline-none
       focus:ring-2
       focus:ring-naranja_primario
