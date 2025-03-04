@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AnalisisController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,4 @@ require __DIR__.'/auth.php';
 
 // Ruta a sandbox para pruebas de backend
 Route::get('/sandbox', [HomeController::class, 'sandbox'])->name('sandbox');
+Route::get('/analisis/pre-analisis', [AnalisisController::class, 'preAnalisisForm'])->name('preAnalisis');
