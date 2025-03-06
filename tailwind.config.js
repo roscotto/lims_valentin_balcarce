@@ -14,6 +14,11 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+              naranja_primario: "#EE2B08", // Un azul personalizado
+              naranja_50:"rgba(238, 43, 8, 0.50)",
+              naranja_10:"antiquewhite"
+            }
         },
     },
 
