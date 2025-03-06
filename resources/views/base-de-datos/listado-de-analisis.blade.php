@@ -1,3 +1,9 @@
+<?php
+ /**
+  @var \App\Models\Certificado[] $certificados
+*/
+?>
+
 @extends('layouts.main')
 
 
@@ -10,6 +16,19 @@
 
   <h1>Listado de análisis</h1>
 
+  @if ($certificados->isEmpty())
+  <p>No hay certificados</p>
+  @else
+  <ul>
+    @foreach($certificados as $certificado)
+      <li>
+        <a href="#">
+          {{ $certificado->nombre }}
+        </a>
+      </li>
+    @endforeach
+  </ul>
+  @endif
 
 </section>
 @endsection

@@ -33,7 +33,7 @@ class HomeController extends Controller
       // Listado de métodos de análisis
       $metodos = \App\Models\MetodoDeAnalisis::all();
 
-      $productoDeterminado = $this->getMetodosPorParametrosdeProducto(40);
+      $productoDeterminado = $this->getMetodosPorParametrosdeProducto(10);
 
         return view('sandbox.sandbox', [
             'productos' => $productos,

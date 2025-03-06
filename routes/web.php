@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AnalisisController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProveedorController;
 use Illuminate\Support\Facades\Route;
 
 // Ruta raíz al inicio de sesión
@@ -25,3 +27,11 @@ Route::get('/sandbox', [HomeController::class, 'sandbox'])
 // Ruta a la página principal del sistema - "Módulo de Carga"
 Route::get('/modulo-de-carga', [HomeController::class, 'moduloDeCarga'])
   ->name('modulo-de-carga');
+
+// Ruta al listado de análisis
+Route::get('/listado-de-analisis', [AnalisisController::class, 'listadoDeAnalisis'])
+  ->name('listado-de-analisis');
+
+// Panel de Administración - Ruta al listado de proveedores
+Route::get('/administrar-proveedores', [ProveedorController::class, 'administrarProveedores'])
+  ->name('administrar-proveedores');
