@@ -10,12 +10,13 @@
         </h2>
     </x-slot>
     <div class="px-8  w-[100%]" >
-      <form method="POST"  class="p-1 flex flex-col justify-center" >
+      <form method="POST" action="{{route('validacionDatosAnalisis')}}"  class="p-1 flex flex-col justify-center" >
         @csrf
         <div class="flex justify-between w-[100%]">
           <div class="w-[70%]">
             <x-input-label for="nombre_prudcto" :value="__('Producto')" />
             <x-text-input id="nombre_prudcto" class="block mt-1 w-full" type="text" name="nombre_prudcto" value="{{$producto->nombre}}" disabled />
+            <input type="hidden" name="producto_id" value="{{$producto->producto_id}}">
             <x-input-error :messages="$errors->get('nombre_prudcto')" class="mt-2" />
           </div>
           <div class="w-[25%] self-end">
@@ -60,17 +61,17 @@
             <tbody>
               @foreach ($parametros as $parametro)
                 <tr class="mb-4 even:bg-naranja_10 odd:bg-white border-b">
-                  @if ($parametro->valor_min != null)  {{-- Solo mostrará opciones donde el valor no sea 3 --}}
+                  @if ($parametro->valor_min != null)
                     <td>{{$parametro->parametro}}</td>
                     <td class="text-center">{{$parametro->valor_min}}</td>
                     <td class="text-center">{{$parametro->valor_max}}</td>
                     <td>
                       <x-input-number
-                        name="muestra_concentracion"
-                        value=""
-                        min="0"
-                        max="1000"
-                        step="5"
+                        name="{{$parametro->parametro}}"
+                        value="0"
+                        step="0.001"
+                        {{-- min="{{$parametro->valor_min}}"
+                        max="{{$parametro->valor_max}}" --}}
                         placeholder="Muestra"
                       />
                     </td>
@@ -81,7 +82,7 @@
                     <td>
                       <div class="inline-flex items-center">
                         <label class="flex items-center cursor-pointer relative">
-                          <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-blue-600 checked:border-blue-600" id="check1" />
+                          <input type="checkbox" name="{{$parametro->parametro}}"  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-blue-600 checked:border-blue-600" id="check1" />
                           <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                           <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
