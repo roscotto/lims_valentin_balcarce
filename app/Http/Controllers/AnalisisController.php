@@ -30,7 +30,7 @@ class AnalisisController extends Controller
   }
 
   /**
-   * Agrega una nueva noticia a la base de datos
+   * Crea una nueva entrada en la tabla certificados y devuelve la vista de carga de datos de analisis
    * @param Request $request
    * @return \Illuminate\Http\RedirectResponse
    */
@@ -55,18 +55,78 @@ class AnalisisController extends Controller
   }
 
   /**
-   *  Retorna la vista de sandbox
+   *  Valida los datos ingresados en el formulario de carga de datos
    *  @return \Illuminate\View\View
    */
-  public function cargaDatosAnalisis($producto_id){
-    //por ahora no lo uso
-    // $producto = Producto::where('producto_id', $producto_id)->first();
+  public function validacionDatosAnalisis(Request $request){
+    //bandera que indica si alguno de los parametros es incorrecto
+    $bandera = true;
+    //arreglo que registra que campos estan mal
+    $errores = [];
+    //obtenemos el id del producto
+    $prudcto_id = $request->producto_id;
+    //traigo los metodos de analisis del producto
+    $metodoDeAnalisis = $this->getMetodosPorParametrosdeProducto($prudcto_id)->parametros;
+    //este arrglo contendra los datos de la base saneados
+    $valoresMetodoDeAnalisis = [];
 
-    // dd($producto);
+    //ahora que tenemos los datos del metodo de analisis transformamos los datos en algo más legible
+    foreach ($metodoDeAnalisis as $metodo) {
+      $unMetodo = [
+        $metodo->parametro = str_replace(' ', '_', $metodo->parametro),
+        $metodo->valor_min,
+        $metodo->valor_max,
+        $metodo->referencia
+      ];
+      array_push($valoresMetodoDeAnalisis, $unMetodo);
+    }
 
-    // return view('analisis.carga_datos_analisis',[
+    foreach ($valoresMetodoDeAnalisis as $metodo) {
+      //esta variable contiene el nombre del parametro que vamos a evaluar
+      $parametro_nombre    = $metodo[0];
+      $parametro_valor_max = (float) $metodo[2];
+      $parametro_valor_min = (float) $metodo[1];
+      $parametro_referencia= $metodo[3];
+      //usamos el nombre del parametro para obtener el valor traido del request
+      $valor_parametro = $request->$parametro_nombre;
 
-    // ]);
+
+      if ($parametro_referencia == null){
+        $valor_parametro_parse = (float) $valor_parametro;
+        if (!($valor_parametro_parse >= $parametro_valor_min && $valor_parametro_parse <= $parametro_valor_max)){
+          $bandera = false;
+          $nombre = str_replace('_', ' ', $parametro_nombre);
+          $errores[] = "El parámetro '{$nombre}' esta fuera de rango.";
+        }
+      }else{
+        if ($valor_parametro != 'on'){
+          $bandera = false;
+          $errores[] = "El parámetro '{$parametro_nombre}' no corresponde.";
+        }
+      }
+    }
+
+    //generar los campos necesarios para crear una nueva fina en la tabla analisis_resultados
+
+    //redireccionar a la misma pantalla mostrando un modal con la informacion necesario
+
+    dd($errores);
+    if ($bandera) {
+      return redirect()->route('cargaDatosAnalisis')
+          ->with('status.message', 'todo ok');
+    }
+    return redirect()->route('cargaDatosAnalisis')
+      ->with('status.message', 'Error ');
+
+
+  }
+
+  /**
+   *  Retorna la vista de carga de datos de analisis
+   *  @return \Illuminate\View\View
+   */
+  public function cargaDatosAnalisis(){
+    return view('analisis.carga_datos_analisis', [  ]);
   }
 
   private function getMetodosPorParametrosdeProducto($producto_id)
