@@ -49,6 +49,10 @@ class CategoriasDeParametrosSeeder extends Seeder
             ['categoria_de_parametro_id' => 37, 'categoria_de_parametro' => 'Demanda Bioquimica de Oxígeno'],
             ['categoria_de_parametro_id' => 38, 'categoria_de_parametro' => 'Demanda Quimica de Oxígeno'],
             ['categoria_de_parametro_id' => 39, 'categoria_de_parametro' => 'Nitratos'],
+            ['categoria_de_parametro_id' => 40, 'categoria_de_parametro' => 'Residuos Evaporación'],
+            ['categoria_de_parametro_id' => 41, 'categoria_de_parametro' => 'Residuos Calcinación'],
+            ['categoria_de_parametro_id' => 42, 'categoria_de_parametro' => 'Punto de Solidificación'],
+            ['categoria_de_parametro_id' => 43, 'categoria_de_parametro' => 'Temperatura']
         ]);
     }
 }
