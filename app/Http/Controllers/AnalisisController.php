@@ -45,7 +45,6 @@ class AnalisisController extends Controller
     //traigo los metodos de analisis del producto
     $metodoDeAnalisis = $this->getMetodosPorParametrosdeProducto($data['productos']);
 
-
     //re dirijo a la seiguiente pantalla
     return view('analisis.carga_datos_analisis',[
       'producto' => $producto,
@@ -64,9 +63,9 @@ class AnalisisController extends Controller
     //arreglo que registra que campos estan mal
     $errores = [];
     //obtenemos el id del producto
-    $prudcto_id = $request->producto_id;
+    $producto_id = $request->producto_id;
     //traigo los metodos de analisis del producto
-    $metodoDeAnalisis = $this->getMetodosPorParametrosdeProducto($prudcto_id)->parametros;
+    $metodoDeAnalisis = $this->getMetodosPorParametrosdeProducto($producto_id)->parametros;
     //este arrglo contendra los datos de la base saneados
     $valoresMetodoDeAnalisis = [];
 
@@ -109,14 +108,18 @@ class AnalisisController extends Controller
     //generar los campos necesarios para crear una nueva fina en la tabla analisis_resultados
 
     //redireccionar a la misma pantalla mostrando un modal con la informacion necesario
-
-    dd($errores);
     if ($bandera) {
-      return redirect()->route('cargaDatosAnalisis')
-          ->with('status.message', 'todo ok');
+      return view('analisis.resultado_datos_analisis',[
+        'status' => $bandera,
+        'message' => 'Los parámetros ingresados cumplen con las especificaciones técnicas requeridas',
+        'errores' => $errores
+      ]);
     }
-    return redirect()->route('cargaDatosAnalisis')
-      ->with('status.message', 'Error ');
+    return view('analisis.resultado_datos_analisis',[
+      'status' => $bandera,
+      'message' => 'Los parámetros ingresados no cumplen con las especificaciones técnicas requeridas',
+      'errores' => $errores
+    ]);
 
 
   }
