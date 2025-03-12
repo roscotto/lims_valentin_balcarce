@@ -77,13 +77,13 @@ class HomeController extends Controller
                             $parametro->metodo = \App\Models\MetodoDeAnalisis::find(3);
                             break;
                         case '12': // ASPECTO
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '13': // COLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '14': // OLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         default:
                         $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -107,13 +107,13 @@ class HomeController extends Controller
                             $parametro->metodo = \App\Models\MetodoDeAnalisis::find(8);
                             break;
                         case '12': // ASPECTO
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '13': // COLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '14': // OLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         default:
                         $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -137,13 +137,13 @@ class HomeController extends Controller
                             $parametro->metodo = \App\Models\MetodoDeAnalisis::find(12);
                             break;
                         case '12': // ASPECTO
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '13': // COLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '14': // OLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         default:
                         $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -176,13 +176,13 @@ class HomeController extends Controller
                             $parametro->metodo = \App\Models\MetodoDeAnalisis::find(19);
                             break;
                         case '12': // ASPECTO
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '13': // COLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '14': // OLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         default:
                         $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -200,13 +200,13 @@ class HomeController extends Controller
                             $parametro->metodo = \App\Models\MetodoDeAnalisis::find(21);
                             break;
                         case '12': // ASPECTO
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '13': // COLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '14': // OLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         default:
                         $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -226,13 +226,13 @@ class HomeController extends Controller
                       case '5': // CLORURO
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(24);
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -259,13 +259,13 @@ class HomeController extends Controller
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(28);
                           break;
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -288,13 +288,13 @@ class HomeController extends Controller
                       case '2': // PESO ESPECÍFICO
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(32);
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -315,13 +315,13 @@ class HomeController extends Controller
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(35);
                           break;
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -351,13 +351,13 @@ class HomeController extends Controller
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(41);
                           break;
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -387,13 +387,13 @@ class HomeController extends Controller
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(47);
                           break;
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -411,13 +411,13 @@ class HomeController extends Controller
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(49);
                           break;
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -459,13 +459,13 @@ class HomeController extends Controller
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(59);
                           break;
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
