@@ -14,10 +14,10 @@
         @csrf
         <div class="flex justify-between w-[100%]">
           <div class="w-[70%]">
-            <x-input-label for="nombre_prudcto" :value="__('Producto')" />
-            <x-text-input id="nombre_prudcto" class="block mt-1 w-full" type="text" name="nombre_prudcto" value="{{$producto->nombre}}" disabled />
+            <x-input-label for="nombre_producto" :value="__('Producto')" />
+            <x-text-input id="nombre_producto" class="block mt-1 w-full" type="text" name="nombre_producto" value="{{$producto->nombre}}" disabled />
             <input type="hidden" name="producto_id" value="{{$producto->producto_id}}">
-            <x-input-error :messages="$errors->get('nombre_prudcto')" class="mt-2" />
+            <x-input-error :messages="$errors->get('nombre_producto')" class="mt-2" />
           </div>
           <div class="w-[25%] self-end">
             <button class="
