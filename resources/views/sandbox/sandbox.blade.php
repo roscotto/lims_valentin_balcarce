@@ -183,7 +183,8 @@
                   <td style="padding: 5px;">{{ $parametro->valor_max ?? '' }}</td>
                   <td style="padding: 5px;">{{ $parametro->referencia ?? '' }}</td>
                   <td style="padding: 5px;">{{ $parametro->valor ?? '' }}</td>
-                  <td style="padding: 5px;">{{ $parametro->metodo ? $parametro->metodo->metodo_de_analisis : '' }}</td>
+                  {{-- <td style="padding: 5px;">{{ $parametro->metodo ? $parametro->metodo->metodo_de_analisis : '' }}</td> --}}
+                  <td style="padding: 5px;">{{ $parametro->metodo->metodo_de_analisis == 'no aplica' ? '' : $parametro->metodo->metodo_de_analisis }}</td>
               </tr>
               @endforeach
           </tbody>
