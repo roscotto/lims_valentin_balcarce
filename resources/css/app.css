@@ -2,12 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.btn-accion {
+  @apply
+  px-4
+  mt-8
+  py-2
+  bg-white
+  border
+  border-naranja_primario
+  rounded-md
+  font-semibold
+  text-xs
+  text-black
+  uppercase
+  tracking-widest
+  hover:bg-naranja_50
+  hover:text-white
+  active:bg-naranja_primario
+  focus:bg-naranja_primario
+  focus:outline-none
+  focus:ring-2
+  focus:ring-naranja_primario
+  focus:ring-offset-2
+  transition
+  ease-in-out
+  duration-150
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+
 }
 
 body{
