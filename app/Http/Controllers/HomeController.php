@@ -35,13 +35,19 @@ class HomeController extends Controller
 
       $productoDeterminado = $this->getMetodosPorParametrosdeProducto(10);
 
+      $certificadoDeterminado = \App\Models\Certificado::find(1);
+
+      $resultadosAnalisis = \App\Models\ResultadoDeAnalisis::where('certificado_id', 1)->get();
+
         return view('sandbox.sandbox', [
             'productos' => $productos,
             'certificados' => $certificados,
             'proveedores' => $proveedores,
             'parametros' => $parametros,
             'metodos' => $metodos,
-            'productoDeterminado' => $productoDeterminado
+            'productoDeterminado' => $productoDeterminado,
+            'certificadoDeterminado' => $certificadoDeterminado,
+            'resultadosAnalisis' => $resultadosAnalisis
 
         ]);
     }
@@ -481,6 +487,8 @@ class HomeController extends Controller
 
         return $producto;
     }
+
+
 }
 
 

@@ -46,4 +46,16 @@ class Producto extends Model
         );
     }
 
+    // Relación de uno a muchos entre la tabla productos y la tabla certificados
+    public function certificados()
+    {
+        return $this->hasMany(Certificado::class, 'producto_id', 'producto_id');
+    }
+
+    // Relación de uno a muchos entre la tabla productos y la tabla resultados_de_analisis
+    public function resultadosDeAnalisis()
+    {
+        return $this->hasMany(ResultadoDeAnalisis::class, 'producto_id', 'producto_id');
+    }
+
 }

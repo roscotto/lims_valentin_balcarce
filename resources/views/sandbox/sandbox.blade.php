@@ -153,16 +153,6 @@
 
       <p><b>Producto: {{ $productoDeterminado->nombre }}</b></p>
 
-      {{-- <p> Parámetros con métodos de análisis</p>
-      @foreach($productoDeterminado->parametros as $parametro)
-      <p style="margin: 0;"> {{ $parametro->parametro }}
-        @if($parametro->valor_min) {{ $parametro->valor_min }} @endif
-        @if($parametro->valor_max) - {{ $parametro->valor_max }} @endif
-        @if ($parametro->referencia) - {{ $parametro->referencia }} - {{ $parametro->valor }} @endif
-        {{ $parametro->metodo ? $parametro->metodo->metodo_de_analisis : '' }}
-      </p>
-      @endforeach  --}}
-
       <p>Parámetros con métodos de análisis</p>
       <table style="width: 100%; border-collapse: collapse; margin-top: 10px;" border="1">
           <thead>
@@ -183,7 +173,6 @@
                   <td style="padding: 5px;">{{ $parametro->valor_max ?? '' }}</td>
                   <td style="padding: 5px;">{{ $parametro->referencia ?? '' }}</td>
                   <td style="padding: 5px;">{{ $parametro->valor ?? '' }}</td>
-                  {{-- <td style="padding: 5px;">{{ $parametro->metodo ? $parametro->metodo->metodo_de_analisis : '' }}</td> --}}
                   <td style="padding: 5px;">{{ $parametro->metodo->metodo_de_analisis == 'no aplica' ? '' : $parametro->metodo->metodo_de_analisis }}</td>
               </tr>
               @endforeach
@@ -191,8 +180,103 @@
       </table>
 
 
+      <hr style="margin: 25px 0px;">
+
+      <h2>Listado de certificados </h2>
+
+
+      <table style="width: 100%; border-collapse: collapse; margin-top: 10px;" border="1">
+          <thead>
+              <tr>
+                  <th style="padding: 5px; text-align: left;">N° CDA</th>
+                  <th style="padding: 5px; text-align: left;">N° LOTE</th>
+                  <th style="padding: 5px; text-align: left;">N° PRODUCTO</th>
+                  <th style="padding: 5px; text-align: left;">NOMBRE PRODUCTO</th>
+                  <th style="padding: 5px; text-align: left;">PROVEEDOR</th>
+                  <th style="padding: 5px; text-align: left;">FECHA DE CARGA</th>
+                  <th style="padding: 5px; text-align: left;">ESTADO</th>
+                  <th style="padding: 5px; text-align: left;">ACCIONES</th>
+              </tr>
+          </thead>
+          <tbody>
+              @foreach($certificados as $certificado)
+              <tr>
+                  <td style="padding: 5px;">{{ $certificado->numero_de_cda }}</td>
+                  <td style="padding: 5px;">{{ $certificado->numero_de_lote }}</td>
+                  <td style="padding: 5px;">{{ $certificado->producto_id }}</td>
+                  <td style="padding: 5px;">{{ $certificado->producto->nombre }}</td>
+                  <td style="padding: 5px;">{{ $certificado->proveedor->nombre }}</td>
+                  <td style="padding: 5px;">{{ $certificado->fecha_de_emision }}</td>
+                  <td style="padding: 5px;">{{ $certificado->estado }}</td>
+                  <td style="padding: 5px;">
+                      <a href="#">Ver</a>
+                      <a href="#">Editar</a>
+                  </td>
+              </tr>
+              @endforeach
+          </tbody>
+
+      </table>
+
+      <hr style="margin: 25px 0px;">
+
+      <h2>Detalle de un certificado </h2>
 
 
 
+      <ul>
+        <li><p>N° DE CDA: {{ $certificado->numero_de_cda }}</p></li>
+        <li><p>N° DE LOTE: {{ $certificado->numero_de_lote }}</p></li>
+        <li><p>FECHA DE EMISIÓN: {{ $certificado->fecha_de_emision }}</p></li>
+        <li><p>FECHA DE VALIDEZ: {{ $certificado->fecha_de_validez }}</p></li>
+        <li><p>PRODUCTO: {{ $certificado->producto->nombre }}</p></li>
+
+
+      </ul>
+      <p>OTROS DATOS DE LA PRE CARGA </p>
+
+      <ul>
+        <li><p>PROVEEDOR: {{ $certificado->proveedor->nombre }}</p></li>
+        <li><p>TIPO DE EVENTO: {{ $certificado->tipoDeEvento->tipo_de_evento }}</p></li>
+        <li><p>NUMERO DE REMITO: {{ $certificado->numero_de_remito }} </p></li>
+        <li><p>NUMERO DE CDA PROVEEDOR: {{ $certificado->numero_de_cda_proveedor }} </p></li>
+        <li><p>ESTADO: {{ $certificado->estado }}</p></li>
+      </ul>
+
+
+      <table style="width: 100%; border-collapse: collapse; margin-top: 10px;" border="1">
+        <thead>
+            <tr>
+                <th style="padding: 5px; text-align: left;">DETERMINACIÓN ANALÍTICA</th>
+                <th style="padding: 5px; text-align: left;">PARÁMETROS</th>
+                <th style="padding: 5px; text-align: left;">RESULTADOS</th>
+                <th style="padding: 5px; text-align: left;">MÉTODO</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach($resultadosAnalisis as $resultadoAnalisis)
+            <tr>
+                <td style="padding: 5px;">{{ $resultadoAnalisis->parametro->parametro }}</td>
+                <td style="padding: 5px;">
+                  {{ ($resultadoAnalisis->parametro->valor_min !== null || $resultadoAnalisis->parametro->valor_max !== null)
+                      ? $resultadoAnalisis->parametro->valor_min . ' - ' . $resultadoAnalisis->parametro->valor_max : $resultadoAnalisis->parametro->referencia }}
+                </td>
+                <td style="padding: 5px;">
+                  {{ ($resultadoAnalisis->resultado_valor !== null)
+                      ? $resultadoAnalisis->resultado_valor : $resultadoAnalisis->resultado_referencia }}
+                </td>
+                {{-- <td style="padding: 5px;">{{ $resultadoAnalisis->parametro->metodo->metodo_de_analisis == 'no aplica' ? '' : $resultadoAnalisis->parametro->metodo->metodo_de_analisis }}</td> --}}
+
+{{--  RESTA IMPRIMIR CORRECTAMENTE LOS MÉTODOS DE ANALISIS CORRESPONDIENTE A CADA DERTERMINACION ANALITICA --}}
+
+
+
+
+            @endforeach
+        </tbody>
+
+      </table>
+      {{-- @dd($resultadosAnalisis) --}}
     </body>
 </html>
