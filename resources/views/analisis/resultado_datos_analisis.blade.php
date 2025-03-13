@@ -92,10 +92,27 @@
                 <th class="p-2 text-white font-bold text-left">Parámetro</th>
                 <th class=" text-white font-bold text-center">Valor min</th>
                 <th class=" text-white font-bold text-center">Valor max</th>
-                <th class=" text-white font-bold text-center">Muestra</th>
+                <th class=" text-white font-bold text-center">Muestra obtenida</th>
               </tr>
             </thead>
-@dump($errores)
+            <tbody>
+
+              @foreach ($errores as $error)
+                <tr class="mb-4 even:bg-naranja_10 odd:bg-white border-b">
+                  @if ($error['valor_min'] != null)
+                    <td>{{$error['parametro']}}</td>
+                    <td class="text-center">{{$error['valor_min']}}</td>
+                    <td class="text-center">{{$error['valor_max']}}</td>
+                    <td>{{$error['muestra']}}</td>
+                  @else
+                    <td>{{$error['parametro']}}</td>
+                    <td>{{$error['valor_min']}}</td>
+                    <td>{{$error['valor_max']}}</td>
+                    <td>{{$error['muestra']}}</td>
+                  @endif
+                </tr>
+              @endforeach
+            </tbody>
           </table>
         </div>
         <div>
@@ -103,7 +120,7 @@
             <button class="btn-accion lg:w-[30%] sm:w-full lg:mr-1">
               Aceptar carga con desvio
             </button>
-            <x-danger-button class="px-4 mt-8 py-2 lg:w-[30%] sm:w-full ">
+            <x-danger-button class="px-4 mt-8 py-2 lg:w-[30%] sm:w-full">
               Rachazar material
             </x-danger-button>
 

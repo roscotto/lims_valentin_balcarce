@@ -95,12 +95,25 @@ class AnalisisController extends Controller
         if (!($valor_parametro_parse >= $parametro_valor_min && $valor_parametro_parse <= $parametro_valor_max)){
           $bandera = false;
           $nombre = str_replace('_', ' ', $parametro_nombre);
-          $errores[] = "El parámetro '{$nombre}' esta fuera de rango.";
+          $error = [
+            'parametro' => $nombre,
+            'valor_min' => $parametro_valor_min ,
+            'valor_max' => $parametro_valor_max,
+            'muestra'   => $valor_parametro_parse
+          ];
+          $errores[] = $error;
+          //$errores[] = "El parámetro '{$nombre}' esta fuera de rango.";
         }
       }else{
         if ($valor_parametro != 'on'){
           $bandera = false;
-          $errores[] = "El parámetro '{$parametro_nombre}' no corresponde.";
+          $error = [
+            'parametro' => $parametro_nombre ,
+            'valor_min' => null ,
+            'valor_max' => null,
+            'muestra'   => 'No cumple'
+          ];
+          $errores[] = $error;
         }
       }
     }
