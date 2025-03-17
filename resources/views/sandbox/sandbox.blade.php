@@ -102,7 +102,6 @@
             <th style="border: 1px solid black; padding: 5px;">Valor mínimo</th>
             <th style="border: 1px solid black; padding: 5px;">Valor máximo</th>
             <th style="border: 1px solid black; padding: 5px;">Referencia</th>
-            <th style="border: 1px solid black; padding: 5px;">Valor</th>
           </tr>
         </thead>
         <tbody>
@@ -114,7 +113,6 @@
               <td style="border: 1px solid black; padding: 5px;">{{ $parametro->valor_min }}</td>
               <td style="border: 1px solid black; padding: 5px;">{{ $parametro->valor_max }}</td>
               <td style="border: 1px solid black; padding: 5px;">{{ $parametro->referencia }}</td>
-              <td style="border: 1px solid black; padding: 5px;">{{ $parametro->valor }}</td>
             </tr>
           @endforeach
         </tbody>
@@ -161,7 +159,6 @@
                   <th style="padding: 5px; text-align: left;">Valor Mínimo</th>
                   <th style="padding: 5px; text-align: left;">Valor Máximo</th>
                   <th style="padding: 5px; text-align: left;">Referencia</th>
-                  <th style="padding: 5px; text-align: left;">Valor</th>
                   <th style="padding: 5px; text-align: left;">Método de Análisis</th>
               </tr>
           </thead>
@@ -172,7 +169,6 @@
                   <td style="padding: 5px;">{{ $parametro->valor_min ?? '' }}</td>
                   <td style="padding: 5px;">{{ $parametro->valor_max ?? '' }}</td>
                   <td style="padding: 5px;">{{ $parametro->referencia ?? '' }}</td>
-                  <td style="padding: 5px;">{{ $parametro->valor ?? '' }}</td>
                   <td style="padding: 5px;">{{ $parametro->metodo->metodo_de_analisis == 'no aplica' ? '' : $parametro->metodo->metodo_de_analisis }}</td>
               </tr>
               @endforeach

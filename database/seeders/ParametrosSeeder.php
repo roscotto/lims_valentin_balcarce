@@ -16,7 +16,6 @@ class ParametrosSeeder extends Seeder
                 'valor_min' => 33.5,
                 'valor_max' => 34.5,
                 'referencia' => null,
-                'valor' => null,
                 'categoria_de_parametro_id' => 1,
             ],
             [
@@ -25,7 +24,6 @@ class ParametrosSeeder extends Seeder
                 'valor_min' => 38.5,
                 'valor_max' => 39.5,
                 'referencia' => null,
-                'valor' => null,
                 'categoria_de_parametro_id' => 1,
             ],
             [
@@ -34,7 +32,6 @@ class ParametrosSeeder extends Seeder
                 'valor_min' => 28,
                 'valor_max' => 29.9,
                 'referencia' => null,
-                'valor' => null,
                 'categoria_de_parametro_id' => 1,
             ],
             [
@@ -43,7 +40,6 @@ class ParametrosSeeder extends Seeder
                 'valor_min' => 77.5,
                 'valor_max' => 78.5,
                 'referencia' => null,
-                'valor' => null,
                 'categoria_de_parametro_id' => 1,
             ],
             [
@@ -52,7 +48,6 @@ class ParametrosSeeder extends Seeder
                 'valor_min' => 50,
                 'valor_max' => 51.5,
                 'referencia' => null,
-                'valor' => null,
                 'categoria_de_parametro_id' => 1,
             ],
             [
@@ -61,7 +56,6 @@ class ParametrosSeeder extends Seeder
                 'valor_min' => 39.5,
                 'valor_max' => 40.5,
                 'referencia' => null,
-                'valor' => null,
                 'categoria_de_parametro_id' => 1,
             ],
             [
@@ -70,7 +64,6 @@ class ParametrosSeeder extends Seeder
                 'valor_min' => 27,
                 'valor_max' => 29,
                 'referencia' => null,
-                'valor' => null,
                 'categoria_de_parametro_id' => 1,
             ],
             [
@@ -79,7 +72,6 @@ class ParametrosSeeder extends Seeder
                 'valor_min' => 42,
                 'valor_max' => 43,
                 'referencia' => null,
-                'valor' => null,
                 'categoria_de_parametro_id' => 1,
             ],
             [
@@ -88,7 +80,6 @@ class ParametrosSeeder extends Seeder
                 'valor_min' => 29,
                 'valor_max' => 30,
                 'referencia' => null,
-                'valor' => null,
                 'categoria_de_parametro_id' => 1,
             ],
             [
@@ -97,7 +88,6 @@ class ParametrosSeeder extends Seeder
                 'valor_min' => 15,
                 'valor_max' => 17,
                 'referencia' => null,
-                'valor' => null,
                 'categoria_de_parametro_id' => 1,
             ],
             [
@@ -106,7 +96,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 29.5,
               'valor_max' => 31,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1,
           ],
           [
@@ -115,7 +104,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 31,
               'valor_max' => 34,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1,
           ],
           [
@@ -124,7 +112,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 9,
               'valor_max' => 11,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1,
           ],
           [
@@ -133,7 +120,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 92,
               'valor_max' => 93,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1,
           ],
           [
@@ -142,7 +128,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 97.5,
               'valor_max' => 99.99,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1,
           ],
           [
@@ -151,7 +136,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 37,
               'valor_max' => 38,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1,
           ],
           [
@@ -160,7 +144,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 44,
               'valor_max' => 45.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1,
           ],
           [
@@ -169,7 +152,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 37.5,
               'valor_max' => 38.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1,
           ],
           [
@@ -178,7 +160,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 30.5,
               'valor_max' => 31.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -187,7 +168,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 60,
               'valor_max' => 61,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -196,7 +176,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 28,
               'valor_max' => 29.9,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -205,7 +184,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 99.5,
               'valor_max' => 99.99,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -214,7 +192,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 31,
               'valor_max' => 33,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -223,7 +200,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 48.5,
               'valor_max' => 52.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -232,7 +208,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 39,
               'valor_max' => 41,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -241,7 +216,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 97.5,
               'valor_max' => 99.99,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -250,7 +224,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 28,
               'valor_max' => 29.9,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -259,7 +232,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 29,
               'valor_max' => 31,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -268,7 +240,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 32,
               'valor_max' => 35,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -277,7 +248,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 18.5,
               'valor_max' => 19.9,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -286,7 +256,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 14.5,
               'valor_max' => 16,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -295,7 +264,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 85,
               'valor_max' => 88,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -304,7 +272,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 61.6,
               'valor_max' => 64,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -313,7 +280,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 64,
               'valor_max' => 67,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -322,7 +288,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 48,
               'valor_max' => 51,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -331,7 +296,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 28,
               'valor_max' => 29.8,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -340,7 +304,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 45,
               'valor_max' => 47,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -349,7 +312,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 49,
               'valor_max' => 51,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -358,7 +320,6 @@ class ParametrosSeeder extends Seeder
             'valor_min' => 89,
             'valor_max' => 92,
             'referencia' => null,
-            'valor' => null,
             'categoria_de_parametro_id' => 1
           ],
           [
@@ -367,7 +328,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 27.9,
               'valor_max' => 28.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -376,7 +336,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 18,
               'valor_max' => 19.9,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -385,7 +344,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 29,
               'valor_max' => 32,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -394,7 +352,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 34,
               'valor_max' => 36,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -403,7 +360,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 50,
               'valor_max' => 53,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -412,7 +368,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 59.9,
               'valor_max' => 61,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -421,7 +376,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 74.4,
               'valor_max' => 76,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -430,7 +384,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 60.7,
               'valor_max' => 63,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -439,7 +392,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 40.8,
               'valor_max' => 42.1,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -448,7 +400,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 34.8,
               'valor_max' => 36.1,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -457,7 +408,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 99,
               'valor_max' => 99.99,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -466,7 +416,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 38.5,
               'valor_max' => 42,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -475,7 +424,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 99,
               'valor_max' => 99.99,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -484,7 +432,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 28.7,
               'valor_max' => 29.9,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -493,7 +440,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 260,
               'valor_max' => 270,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -502,7 +448,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 242,
               'valor_max' => 252,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -511,7 +456,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 25,
               'valor_max' => 27,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -520,7 +464,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 98,
               'valor_max' => 105,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -529,7 +472,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 1
           ],
           [
@@ -538,7 +480,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.245,
               'valor_max' => 1.255,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -547,7 +488,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.285,
               'valor_max' => 1.295,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -556,7 +496,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.495,
               'valor_max' => 1.51,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -565,7 +504,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.175,
               'valor_max' => 1.189,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -574,7 +512,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.225,
               'valor_max' => 1.235,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -583,7 +520,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.83,
               'valor_max' => 1.85,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -592,7 +528,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.28,
               'valor_max' => 1.295,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -601,7 +536,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.69,
               'valor_max' => 1.71,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -610,7 +544,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.82,
               'valor_max' => 1.83,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -619,7 +552,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.275,
               'valor_max' => 1.29,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -628,7 +560,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.39,
               'valor_max' => 1.41,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -637,7 +568,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.29,
               'valor_max' => 1.31,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -646,7 +576,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.2,
               'valor_max' => 1.22,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -655,7 +584,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.335,
               'valor_max' => 1.35,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -664,7 +592,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.195,
               'valor_max' => 1.21,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -673,7 +600,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.215,
               'valor_max' => 1.23,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -682,7 +608,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.102,
               'valor_max' => 1.117,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -691,7 +616,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.32,
               'valor_max' => 1.34,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -700,7 +624,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.059,
               'valor_max' => 1.075,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -709,7 +632,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.23,
               'valor_max' => 1.25,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -718,7 +640,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.02,
               'valor_max' => 1.03,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -727,7 +648,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.04,
               'valor_max' => 1.055,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -736,7 +656,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.33,
               'valor_max' => 1.36,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -745,7 +664,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.495,
               'valor_max' => 1.53,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -754,7 +672,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.396,
               'valor_max' => 1.42,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -763,7 +680,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.23,
               'valor_max' => 1.257,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -772,7 +688,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.318,
               'valor_max' => 1.34,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -781,7 +696,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.159,
               'valor_max' => 1.182,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -790,7 +704,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.078,
               'valor_max' => 1.085,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -799,7 +712,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.07,
               'valor_max' => 1.08,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -808,7 +720,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.685,
               'valor_max' => 1.705,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -817,7 +728,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.381,
               'valor_max' => 1.41,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -826,7 +736,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.31,
               'valor_max' => 1.34,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -835,7 +744,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.214,
               'valor_max' => 1.252,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -844,7 +752,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.44,
               'valor_max' => 1.46,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -853,7 +760,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.5,
               'valor_max' => 1.52,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -862,7 +768,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0.89,
               'valor_max' => 0.898,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -871,7 +776,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0.921,
               'valor_max' => 0.928,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -880,7 +784,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.09,
               'valor_max' => 1.11,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -889,7 +792,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.125,
               'valor_max' => 1.14,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -898,7 +800,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.195,
               'valor_max' => 1.205,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -907,7 +808,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.243,
               'valor_max' => 1.254,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -916,7 +816,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.429,
               'valor_max' => 1.483,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -925,7 +824,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.235,
               'valor_max' => 1.245,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -934,7 +832,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.205,
               'valor_max' => 1.215,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -943,7 +840,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.19,
               'valor_max' => 1.195,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -952,7 +848,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1.135,
               'valor_max' => 1.145,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 2
           ],
           [
@@ -961,7 +856,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 20,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -970,7 +864,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 2,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -979,7 +872,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.001,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -988,7 +880,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -997,7 +888,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 18,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -1006,7 +896,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.1,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -1015,7 +904,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.2,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -1024,7 +912,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -1033,7 +920,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 1,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -1042,7 +928,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.002,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -1051,7 +936,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.25,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -1060,7 +944,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 1.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 4
           ],
           [
@@ -1069,7 +952,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1078,7 +960,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 15,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1087,7 +968,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.2,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1096,7 +976,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 1.2,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1105,7 +984,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 10,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1114,7 +992,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 20,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1123,7 +1000,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 25,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1132,7 +1008,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.006,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1141,7 +1016,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 3,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1150,7 +1024,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1159,7 +1032,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.08,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 5
           ],
           [
@@ -1168,7 +1040,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 6
           ],
           [
@@ -1177,7 +1048,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 10,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 6
           ],
           [
@@ -1186,7 +1056,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 2,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 6
           ],
           [
@@ -1195,7 +1064,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.02,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 6
           ],
           [
@@ -1204,7 +1072,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 125,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 6
           ],
           [
@@ -1213,7 +1080,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 15,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 7
           ],
           [
@@ -1222,7 +1088,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.0002,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 7
           ],
           [
@@ -1231,7 +1096,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 200,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 7
           ],
           [
@@ -1240,7 +1104,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.05,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 7
           ],
           [
@@ -1249,7 +1112,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 8
           ],
           [
@@ -1258,7 +1120,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 1,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 8
           ],
           [
@@ -1267,7 +1128,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 1.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 8
           ],
           [
@@ -1276,7 +1136,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 2.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 8
           ],
           [
@@ -1285,7 +1144,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 95,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 9
           ],
           [
@@ -1294,7 +1152,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 125,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 9
           ],
           [
@@ -1303,7 +1160,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 195,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 9
           ],
           [
@@ -1312,7 +1168,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 245,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 9
           ],
           [
@@ -1321,7 +1176,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 10
           ],
           [
@@ -1330,7 +1184,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 1000,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 10
           ],
           [
@@ -1339,7 +1192,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.2,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 10
           ],
           [
@@ -1348,7 +1200,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 3,
               'valor_max' => 4,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 10
           ],
           [
@@ -1357,7 +1208,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 1,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 10
           ],
           [
@@ -1366,7 +1216,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 75.5,
               'valor_max' => 99.99,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 11
           ],
           [
@@ -1375,7 +1224,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 2000,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 11
           ],
           [
@@ -1384,7 +1232,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.2,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 11
           ],
           [
@@ -1393,7 +1240,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 2,
               'valor_max' => 5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 11
           ],
           [
@@ -1402,7 +1248,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 4.5,
               'valor_max' => 6.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 11
           ],
           [
@@ -1410,8 +1255,7 @@ class ParametrosSeeder extends Seeder
               'parametro' => 'Aspecto',
               'valor_min' => null,
               'valor_max' => null,
-              'referencia' => 'Límpido',
-              'valor' => 'Límpido',
+              'referencia' => 'Líquido Límpido',
               'categoria_de_parametro_id' => 12
           ],
           [
@@ -1420,7 +1264,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Fumante',
-              'valor' => 'Fumante',
               'categoria_de_parametro_id' => 12
           ],
           [
@@ -1429,7 +1272,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Gránulo Variable',
-              'valor' => 'Gránulo Variable',
               'categoria_de_parametro_id' => 12
           ],
           [
@@ -1438,7 +1280,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Polvo',
-              'valor' => 'Polvo',
               'categoria_de_parametro_id' => 12
           ],
           [
@@ -1447,7 +1288,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Libre de Partículas',
-              'valor' => 'Libre de Partículas',
               'categoria_de_parametro_id' => 12
           ],
           [
@@ -1456,7 +1296,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Escamas',
-              'valor' => 'Escamas',
               'categoria_de_parametro_id' => 12
           ],
           [
@@ -1465,7 +1304,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Perlas',
-              'valor' => 'Perlas',
               'categoria_de_parametro_id' => 12
           ],
           [
@@ -1474,7 +1312,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Piedras',
-              'valor' => 'Piedras',
               'categoria_de_parametro_id' => 12
           ],
           [
@@ -1482,8 +1319,7 @@ class ParametrosSeeder extends Seeder
               'parametro' => 'Color',
               'valor_min' => null,
               'valor_max' => null,
-              'referencia' => 'Traslúcido',
-              'valor' => 'Opalescente',
+              'referencia' => 'Traslúcido - Opalescente',
               'categoria_de_parametro_id' => 13
           ],
           [
@@ -1491,8 +1327,7 @@ class ParametrosSeeder extends Seeder
               'parametro' => 'Color',
               'valor_min' => null,
               'valor_max' => null,
-              'referencia' => 'Traslúcido',
-              'valor' => 'Leve Amarillento',
+              'referencia' => 'Traslúcido - Leve Amarillento',
               'categoria_de_parametro_id' => 13
           ],
           [
@@ -1501,7 +1336,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Traslúcido',
-              'valor' => 'Traslúcido',
               'categoria_de_parametro_id' => 13
           ],
           [
@@ -1509,8 +1343,7 @@ class ParametrosSeeder extends Seeder
               'parametro' => 'Color',
               'valor_min' => null,
               'valor_max' => null,
-              'referencia' => 'Celeste',
-              'valor' => 'Verde Claro',
+              'referencia' => 'Celeste - Verde Claro',
               'categoria_de_parametro_id' => 13
           ],
           [
@@ -1519,7 +1352,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Oscuro Anaranjado',
-              'valor' => 'Oscuro Anaranjado',
               'categoria_de_parametro_id' => 13
           ],
           [
@@ -1528,7 +1360,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Amarillento',
-              'valor' => 'Amarillento',
               'categoria_de_parametro_id' => 13
           ],
           [
@@ -1537,7 +1368,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Característico',
-              'valor' => 'Característico',
               'categoria_de_parametro_id' => 14
           ],
           [
@@ -1546,7 +1376,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Blanco',
-              'valor' => 'Blanco',
               'categoria_de_parametro_id' => 13
           ],
           [
@@ -1555,7 +1384,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => null,
               'valor_max' => null,
               'referencia' => 'Celeste',
-              'valor' => 'Celeste',
               'categoria_de_parametro_id' => 13
           ],
           [
@@ -1564,7 +1392,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 1,
               'valor_max' => 2000,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 32
           ],
           [
@@ -1573,7 +1400,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 6.5,
               'valor_max' => 10,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 28
           ],
           [
@@ -1582,7 +1408,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 17
           ],
           [
@@ -1591,7 +1416,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 33
           ],
           [
@@ -1600,7 +1424,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 1,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 33
           ],
           [
@@ -1609,7 +1432,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 50,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 34
           ],
           [
@@ -1618,7 +1440,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 250,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 35
           ],
           [
@@ -1627,7 +1448,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 1,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 36
           ],
           [
@@ -1636,7 +1456,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 2000,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 39
           ],
           [
@@ -1645,7 +1464,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 5000,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 7
           ],
           [
@@ -1654,7 +1472,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 25,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 15
           ],
           [
@@ -1663,7 +1480,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 35,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 15
           ],
           [
@@ -1672,7 +1488,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 15
           ],
           [
@@ -1681,7 +1496,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.05,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 16
           ],
           [
@@ -1690,7 +1504,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 25,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 17
           ],
           [
@@ -1699,7 +1512,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 4,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 18
           ],
           [
@@ -1708,7 +1520,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 20,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 19
           ],
           [
@@ -1717,7 +1528,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.01,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 20
           ],
           [
@@ -1726,7 +1536,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 17,
               'valor_max' => 25,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 21
           ],
           [
@@ -1735,7 +1544,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.015,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 21
           ],
           [
@@ -1744,7 +1552,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.05,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 21
           ],
           [
@@ -1753,7 +1560,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.005,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 21
           ],
           [
@@ -1762,7 +1568,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.1,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 22
           ],
           [
@@ -1771,7 +1576,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 22
           ],
           [
@@ -1780,7 +1584,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.03,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 23
           ],
           [
@@ -1789,7 +1592,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 24
           ],
           [
@@ -1798,7 +1600,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.05,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 24
           ],
           [
@@ -1807,7 +1608,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 10,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 24
           ],
           [
@@ -1816,7 +1616,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 50,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 24
           ],
           [
@@ -1825,7 +1624,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 19.2,
               'valor_max' => 25,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 25
           ],
           [
@@ -1834,7 +1632,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 2,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 25
           ],
           [
@@ -1843,7 +1640,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 99,
               'valor_max' => 99.99,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 26
           ],
           [
@@ -1852,7 +1648,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0.3,
               'valor_max' => 0.8,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 26
           ],
           [
@@ -1861,7 +1656,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 19,
               'valor_max' => 21,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 27
           ],
           [
@@ -1870,7 +1664,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 4,
               'valor_max' => 6,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 27
           ],
           [
@@ -1879,7 +1672,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 3,
               'valor_max' => 3.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 28
           ],
           [
@@ -1888,7 +1680,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 10,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 29
           ],
           [
@@ -1897,7 +1688,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.5,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 30
           ],
           [
@@ -1906,7 +1696,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 2,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 31
           ],
           [
@@ -1915,7 +1704,6 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.05,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 31
           ],
           [
@@ -1924,12 +1712,8 @@ class ParametrosSeeder extends Seeder
               'valor_min' => 0,
               'valor_max' => 0.0003,
               'referencia' => null,
-              'valor' => null,
               'categoria_de_parametro_id' => 31
           ]
-
-
-
         ]);
     }
 }
