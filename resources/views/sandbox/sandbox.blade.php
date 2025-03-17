@@ -266,12 +266,9 @@
                   {{ ($resultadoAnalisis->resultado_valor !== null)
                       ? $resultadoAnalisis->resultado_valor : $resultadoAnalisis->resultado_referencia }}
                 </td>
-                {{-- <td style="padding: 5px;">{{ $resultadoAnalisis->parametro->metodo->metodo_de_analisis == 'no aplica' ? '' : $resultadoAnalisis->parametro->metodo->metodo_de_analisis }}</td> --}}
 
-{{--  RESTA IMPRIMIR CORRECTAMENTE LOS MÉTODOS DE ANALISIS CORRESPONDIENTE A CADA DERTERMINACION ANALITICA --}}
-
-
-
+                <td style="padding: 5px;">{{ $resultadoAnalisis->metodoDeAnalisis->metodo_de_analisis == 'no aplica' ? '' : $resultadoAnalisis->metodoDeAnalisis->metodo_de_analisis }}</td>
+            </tr>
 
             @endforeach
         </tbody>

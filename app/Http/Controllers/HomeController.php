@@ -33,7 +33,7 @@ class HomeController extends Controller
       // Listado de métodos de análisis
       $metodos = \App\Models\MetodoDeAnalisis::all();
 
-      $productoDeterminado = $this->getMetodosPorParametrosdeProducto(10);
+      $productoDeterminado = $this->getMetodosPorParametrosdeProducto(11);
 
       $certificadoDeterminado = \App\Models\Certificado::find(1);
 
