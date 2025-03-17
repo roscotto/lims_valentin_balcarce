@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 
 class ResultadoDeAnalisis extends Model
@@ -11,6 +12,27 @@ class ResultadoDeAnalisis extends Model
 
     // Nombre de la llave primaria
     protected $primaryKey = 'resultado_de_analisis_id';
+
+    /**
+     * Método que devuelve los valores de los resultados quitando los ceros a la derecha del número decimal
+     * Utilizando accessors y mutators
+     * @return Atribute $value
+     */
+    public function resultadoValor() : Attribute
+    {
+        return Attribute::make(
+            // Obtener el valor procesado
+            function ($value) {
+                // Si $value es null, devuelve null directamente, de lo contrario, procesa el valor
+                return $value !== null ? rtrim(rtrim((string) $value, '0'), '.') : null;
+            },
+            // Establecer el valor (sin cambios)
+            function ($value) {
+                return $value;
+            }
+        );
+    }
+
 
     // RELACIONES
 
