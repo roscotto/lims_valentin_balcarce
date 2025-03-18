@@ -62,4 +62,17 @@ class Parametro extends Model
         return $this->belongsTo(CategoriaDeParametro::class, 'categoria_de_parametro_id', 'categoria_de_parametro_id');
     }
 
+    // Relación de uno a muchos entre la tabla parametros y la tabla resultados_de_analisis
+    public function resultadosDeAnalisis()
+    {
+        return $this->hasMany(ResultadoDeAnalisis::class, 'parametro_id', 'parametro_id');
+    }
+
+    // Relación de uno a muchos entre la tabla parametros y la tabla metodos_de_analisis
+    public function metodosDeAnalisis()
+    {
+        return $this->belongsToMany(MetodoDeAnalisis::class, 'metodos_de_analisis_parametros', 'parametro_id', 'metodo_de_analisis_id');
+    }
+
+
 }

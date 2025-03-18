@@ -11,4 +11,12 @@ class TipoDeEvento extends Model
 
     // Nombre de la llave primaria
     protected $primaryKey = 'tipo_de_evento_id';
+
+    // RELACIONES
+
+    // Relación de uno a muchos entre la tabla tipos_de_eventos y la tabla certificados
+    public function certificados()
+    {
+        return $this->hasMany(Certificado::class, 'tipo_de_evento_id', 'tipo_de_evento_id');
+    }
 }

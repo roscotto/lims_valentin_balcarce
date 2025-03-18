@@ -33,7 +33,11 @@ class HomeController extends Controller
       // Listado de métodos de análisis
       $metodos = \App\Models\MetodoDeAnalisis::all();
 
-      $productoDeterminado = $this->getMetodosPorParametrosdeProducto(10);
+      $productoDeterminado = $this->getMetodosPorParametrosdeProducto(11);
+
+      $certificadoDeterminado = \App\Models\Certificado::find(1);
+
+      $resultadosAnalisis = \App\Models\ResultadoDeAnalisis::where('certificado_id', 1)->get();
 
         return view('sandbox.sandbox', [
             'productos' => $productos,
@@ -41,12 +45,12 @@ class HomeController extends Controller
             'proveedores' => $proveedores,
             'parametros' => $parametros,
             'metodos' => $metodos,
-            'productoDeterminado' => $productoDeterminado
+            'productoDeterminado' => $productoDeterminado,
+            'certificadoDeterminado' => $certificadoDeterminado,
+            'resultadosAnalisis' => $resultadosAnalisis
 
         ]);
     }
-
-
 
     /**
      * Método que retorna los métodos de análisis asociados a los parámetros de un producto, asignados dinámicamente según la categoría a la que pertenece el producto     *
@@ -79,13 +83,13 @@ class HomeController extends Controller
                             $parametro->metodo = \App\Models\MetodoDeAnalisis::find(3);
                             break;
                         case '12': // ASPECTO
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '13': // COLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '14': // OLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         default:
                         $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -109,13 +113,82 @@ class HomeController extends Controller
                             $parametro->metodo = \App\Models\MetodoDeAnalisis::find(8);
                             break;
                         case '12': // ASPECTO
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '13': // COLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '14': // OLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                            break;
+                        default:
+                        $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
+                            break;
+                    }
+                }
+                break;
+            case '3': // Si el producto es de la categoría 3 = ACIDO ACETICO
+                foreach ($producto->parametros as $parametro) {
+                    switch ($parametro->categoria_de_parametro_id) {
+                        case '1': // CONCENTRACION
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(9);
+                            break;
+                        case '42': // PUNTO DE SOLIDIFICACIÓN
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(10);
+                            break;
+                        case '5': // CLORUROS
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(11);
+                            break;
+                        case '2': // PESO ESPECÍFICO
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(12);
+                            break;
+                        case '12': // ASPECTO
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                            break;
+                        case '13': // COLOR
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                            break;
+                        case '14': // OLOR
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                            break;
+                        default:
+                        $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
+                            break;
+                    }
+                }
+                break;
+            case '4': // Si el producto es de la categoría 4 = ACIDO NITRICO
+                foreach ($producto->parametros as $parametro) {
+                    switch ($parametro->categoria_de_parametro_id) {
+                        case '1': // CONCENTRACION
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(13);
+                            break;
+                        case '2': // PESO ESPECÍFICO
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(14);
+                            break;
+                        case '40': // RESIDUOS POR EVAPORACION
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(15);
+                            break;
+                        case '41': // PRESIDUOS POR CALCINACION
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(16);
+                            break;
+                        case '4': // HIERRO
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(17);
+                            break;
+                        case '5': // CLORURO
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(18);
+                            break;
+                        case '7': // SULFATOS
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(19);
+                            break;
+                        case '12': // ASPECTO
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                            break;
+                        case '13': // COLOR
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                            break;
+                        case '14': // OLOR
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         default:
                         $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -133,13 +206,13 @@ class HomeController extends Controller
                             $parametro->metodo = \App\Models\MetodoDeAnalisis::find(21);
                             break;
                         case '12': // ASPECTO
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '13': // COLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         case '14': // OLOR
-                            $parametro->metodo = null;
+                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                             break;
                         default:
                         $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -159,13 +232,46 @@ class HomeController extends Controller
                       case '5': // CLORURO
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(24);
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                          break;
+                      default:
+                      $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
+                          break;
+                  }
+              }
+              break;
+            case '7': // Si el producto es de la categoría 7 = AGUA OXIGENADA
+              foreach ($producto->parametros as $parametro) {
+                  switch ($parametro->categoria_de_parametro_id) {
+                      case '1': // CONCENTRACION
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(25);
+                          break;
+                      case '9': // VOLUMEN
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(25);
+                          break;
+                      case '8': // DESCOMPOSICION
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(26);
+                          break;
+                      case '40': // RESIDUOS POR EVAPORACION
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(27);
+                          break;
+                      case '2': // PESO ESPECIFICO
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(28);
+                          break;
+                      case '12': // ASPECTO
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                          break;
+                      case '13': // COLOR
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                          break;
+                      case '14': // OLOR
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -188,13 +294,13 @@ class HomeController extends Controller
                       case '2': // PESO ESPECÍFICO
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(32);
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -215,13 +321,13 @@ class HomeController extends Controller
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(35);
                           break;
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -251,13 +357,13 @@ class HomeController extends Controller
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(41);
                           break;
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -287,13 +393,13 @@ class HomeController extends Controller
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(47);
                           break;
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -311,13 +417,61 @@ class HomeController extends Controller
                           $parametro->metodo = \App\Models\MetodoDeAnalisis::find(49);
                           break;
                       case '12': // ASPECTO
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '13': // COLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       case '14': // OLOR
-                          $parametro->metodo = null;
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                          break;
+                      default:
+                      $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
+                          break;
+                  }
+              }
+                break;
+            case '13': // Si el producto es de la categoría 13 =  EFLUENTES INDUSTRIALES
+              foreach ($producto->parametros as $parametro) {
+                  switch ($parametro->categoria_de_parametro_id) {
+                      case '43': // TEMPERATURA
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(50);
+                          break;
+                      case '28': // PH
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(51);
+                          break;
+                      case '19': // CONDUCTIVIDAD
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(52);
+                          break;
+                      case '33': // SOLIDOS SEDIMENTABLES
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(53);
+                          break;
+                      case '37': // DEMANDA QUIMICA DE OXIGENO
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(54);
+                          break;
+                      case '17': // CLORO LIBRE
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(55);
+                          break;
+                      case '36': // FOSFORO TOTAL
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(56);
+                          break;
+                      case '15': // NITROGENO TOTAL
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(57);
+                          break;
+                      case '7': // SULFATOS
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(58);
+                          break;
+                      case '39': // NITRATOS
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(59);
+                          break;
+                      case '12': // ASPECTO
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                          break;
+                      case '13': // COLOR
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
+                          break;
+                      case '14': // OLOR
+                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
                           break;
                       default:
                       $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
@@ -333,6 +487,8 @@ class HomeController extends Controller
 
         return $producto;
     }
+
+
 }
 
 

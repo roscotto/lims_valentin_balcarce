@@ -70,6 +70,7 @@ class MetodosDeAnalisisSeeder extends Seeder
             ['metodo_de_analisis_id' => 58, 'metodo_de_analisis' => 'QPL-025 (6.9)'],
             ['metodo_de_analisis_id' => 59, 'metodo_de_analisis' => 'QPL-025 (6.10)'],
             ['metodo_de_analisis_id' => 60, 'metodo_de_analisis' => '***'],
+            ['metodo_de_analisis_id' => 61, 'metodo_de_analisis' => 'no aplica'],
         ]);
     }
 }
