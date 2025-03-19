@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Certificado;
 use App\Models\Producto;
-use Dompdf\Dompdf;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Dompdf\Options;
 
 
@@ -14,17 +14,20 @@ class CertificadoController extends Controller
 {
   public function imprimirCertificado(){
 
-    $dompdf = new Dompdf();
-    $dompdf->loadHtml('hello world');
+    $datos = [
+      'nombre' => 'Juan Pérez',
+      'curso' => 'Desarrollo Web con Laravel',
+      'fecha' => now()->format('d/m/Y'),
+    ];
 
-    // (Optional) Setup the paper size and orientation
-    $dompdf->setPaper('A4', 'landscape');
+    // Cargar la vista y generar el PDF
+    $pdf = Pdf::loadView('certificados.pdf.certificado', compact('datos'));
 
-    // Render the HTML as PDF
-    $dompdf->render();
+    // Opcional: Configurar tamaño y orientación
+    $pdf->setPaper('A4', 'landscape'); // Opciones: portrait (vertical) o landscape (horizontal)
 
-    // Output the generated PDF to Browser
-    $dompdf->stream();
+    // Descargar el archivo
+    return $pdf->download('certificado.pdf');
   }
 }
 
