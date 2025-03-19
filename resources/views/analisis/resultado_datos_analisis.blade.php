@@ -35,7 +35,7 @@
         {{-- aca va el boton de descargar pdf --}}
         <div>
           <div class="flex justify-center sm:w-full">
-            <button class="
+            <a href="{{ route('imprimirCertificado') }}" class="
             lg:w-[30%]
             sm:w-full
             px-4
@@ -62,7 +62,7 @@
             ease-in-out
             duration-150">
               Generar certificado
-            </button>
+            </a>
           </div>
         </div>
         @else
