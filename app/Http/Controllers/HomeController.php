@@ -21,6 +21,14 @@ class HomeController extends Controller
       // Listado completo de productos con sus relaciones
       $productos = \App\Models\Producto::with(['categoria', 'proveedores', 'parametros'])->get();
 
+      // Asignar los métodos a los parámetros de cada producto
+      foreach ($productos as $producto) {
+        $productoConMetodos = $this->getMetodosPorParametrosdeProducto($producto->producto_id);
+        if ($productoConMetodos) {
+            $producto->parametros = $productoConMetodos->parametros;
+        }
+      }
+
       // Listado completo de certificados
       $certificados = \App\Models\Certificado::all();
 
@@ -59,436 +67,162 @@ class HomeController extends Controller
      */
     public function getMetodosPorParametrosdeProducto($producto_id)
     {
-        // Encuentro el producto por su id
-        $producto = \App\Models\Producto::with(['parametros'])->find($producto_id);
+      // Encuentro el producto por su id
+      $producto = \App\Models\Producto::with(['parametros'])->find($producto_id);
 
-        if (!$producto) {
-            return null;
-        }
+      if (!$producto) {
+          return null;
+      }
 
-        switch ($producto->categoria_de_producto_id) {
-            case '1': // Si el producto es de la categoría 1 = ACIDO SULFURICO
-                foreach ($producto->parametros as $parametro) {
-                    switch ($parametro->categoria_de_parametro_id) {
-                        case '1': // CONCENTRACION
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(1);
-                            break;
-                        case '2': // PESO ESPECIFICO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(4);
-                            break;
-                        case '4': // HIERRO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(2);
-                            break;
-                        case '7': // SULFATOS
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(3);
-                            break;
-                        case '12': // ASPECTO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        case '13': // COLOR
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        case '14': // OLOR
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        default:
-                        $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                            break;
-                    }
-                }
-                break;
-            case '2': // Si el producto es de la categoría 2 = ACIDO CLORHIDRICO
-                foreach ($producto->parametros as $parametro) {
-                    switch ($parametro->categoria_de_parametro_id) {
-                        case '1': // CONCENTRACION
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(5);
-                            break;
-                        case '17': // CLORO LIBRE
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(6);
-                            break;
-                        case '2': // PESO ESPECIFICO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(7);
-                            break;
-                        case '4': // HIERRO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(8);
-                            break;
-                        case '12': // ASPECTO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        case '13': // COLOR
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        case '14': // OLOR
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        default:
-                        $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                            break;
-                    }
-                }
-                break;
-            case '3': // Si el producto es de la categoría 3 = ACIDO ACETICO
-                foreach ($producto->parametros as $parametro) {
-                    switch ($parametro->categoria_de_parametro_id) {
-                        case '1': // CONCENTRACION
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(9);
-                            break;
-                        case '42': // PUNTO DE SOLIDIFICACIÓN
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(10);
-                            break;
-                        case '5': // CLORUROS
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(11);
-                            break;
-                        case '2': // PESO ESPECÍFICO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(12);
-                            break;
-                        case '12': // ASPECTO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        case '13': // COLOR
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        case '14': // OLOR
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        default:
-                        $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                            break;
-                    }
-                }
-                break;
-            case '4': // Si el producto es de la categoría 4 = ACIDO NITRICO
-                foreach ($producto->parametros as $parametro) {
-                    switch ($parametro->categoria_de_parametro_id) {
-                        case '1': // CONCENTRACION
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(13);
-                            break;
-                        case '2': // PESO ESPECÍFICO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(14);
-                            break;
-                        case '40': // RESIDUOS POR EVAPORACION
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(15);
-                            break;
-                        case '41': // PRESIDUOS POR CALCINACION
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(16);
-                            break;
-                        case '4': // HIERRO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(17);
-                            break;
-                        case '5': // CLORURO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(18);
-                            break;
-                        case '7': // SULFATOS
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(19);
-                            break;
-                        case '12': // ASPECTO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        case '13': // COLOR
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        case '14': // OLOR
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        default:
-                        $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                            break;
-                    }
-                }
-                break;
-            case '5': // Si el producto es de la categoría 5 = ACIDO FOSFORICO
-                foreach ($producto->parametros as $parametro) {
-                    switch ($parametro->categoria_de_parametro_id) {
-                        case '1': // CONCENTRACION
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(20);
-                            break;
-                        case '2': // PESO ESPECIFICO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(21);
-                            break;
-                        case '12': // ASPECTO
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        case '13': // COLOR
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        case '14': // OLOR
-                            $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                            break;
-                        default:
-                        $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                            break;
-                    }
-                }
-                break;
-            case '6': // Si el producto es de la categoría 6 = AGUA AMONIACAL
-              foreach ($producto->parametros as $parametro) {
-                  switch ($parametro->categoria_de_parametro_id) {
-                      case '1': // CONCENTRACION
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(22);
-                          break;
-                      case '2': // PESO ESPECIFICO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(23);
-                          break;
-                      case '5': // CLORURO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(24);
-                      case '12': // ASPECTO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '13': // COLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '14': // OLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      default:
-                      $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                          break;
-                  }
-              }
-              break;
-            case '7': // Si el producto es de la categoría 7 = AGUA OXIGENADA
-              foreach ($producto->parametros as $parametro) {
-                  switch ($parametro->categoria_de_parametro_id) {
-                      case '1': // CONCENTRACION
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(25);
-                          break;
-                      case '9': // VOLUMEN
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(25);
-                          break;
-                      case '8': // DESCOMPOSICION
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(26);
-                          break;
-                      case '40': // RESIDUOS POR EVAPORACION
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(27);
-                          break;
-                      case '2': // PESO ESPECIFICO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(28);
-                          break;
-                      case '12': // ASPECTO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '13': // COLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '14': // OLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      default:
-                      $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                          break;
-                  }
-              }
-              break;
-            case '8': // Si el producto es de la categoría 8 = AGUA DESMINERALIZADA
-              foreach ($producto->parametros as $parametro) {
-                  switch ($parametro->categoria_de_parametro_id) {
-                      case '5': // CLORURO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(29);
-                          break;
-                      case '28': // PH
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(30);
-                          break;
-                      case '32': // CONDUCTIVIDAD
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(31);
-                          break;
-                      case '2': // PESO ESPECÍFICO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(32);
-                      case '12': // ASPECTO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '13': // COLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '14': // OLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      default:
-                      $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                          break;
-                  }
-              }
-                break;
-            case '9': // Si el producto es de la categoría 9 = HIPOCLORITO DE SODIO
-              foreach ($producto->parametros as $parametro) {
-                  switch ($parametro->categoria_de_parametro_id) {
-                      case '1': // CONCENTRACION
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(33);
-                          break;
-                      case '11': // ALCALINIDAD
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(34);
-                          break;
-                      case '2': // PESO ESPECÍFICO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(35);
-                          break;
-                      case '12': // ASPECTO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '13': // COLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '14': // OLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      default:
-                      $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                          break;
-                  }
-              }
-                break;
-            case '10': // Si el producto es de la categoría 10 = HIDROXIDO DE SODIO
-              foreach ($producto->parametros as $parametro) {
-                  switch ($parametro->categoria_de_parametro_id) {
-                      case '1': // CONCENTRACION
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(36);
-                          break;
-                      case '2': // PESO ESPECÍFICO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(37);
-                          break;
-                      case '10': // CARBONATO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(38);
-                          break;
-                      case '5': // CLORURO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(39);
-                          break;
-                      case '7': // SULFATOS
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(40);
-                          break;
-                      case '6': // METALES PESADOS
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(41);
-                          break;
-                      case '12': // ASPECTO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '13': // COLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '14': // OLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      default:
-                      $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                          break;
-                  }
-              }
-                break;
-            case '11': // Si el producto es de la categoría 11 = HIDROXIDO DE POTASIO
-              foreach ($producto->parametros as $parametro) {
-                  switch ($parametro->categoria_de_parametro_id) {
-                      case '1': // CONCENTRACION
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(42);
-                          break;
-                      case '2': // PESO ESPECÍFICO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(43);
-                          break;
-                      case '10': // CARBONATO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(44);
-                          break;
-                      case '5': // CLORURO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(45);
-                          break;
-                      case '7': // SULFATOS
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(46);
-                          break;
-                      case '6': // METALES PESADOS
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(47);
-                          break;
-                      case '12': // ASPECTO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '13': // COLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '14': // OLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      default:
-                      $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                          break;
-                  }
-              }
-                break;
-            case '12': // Si el producto es de la categoría 12 =  CLORURO FERRICO
-              foreach ($producto->parametros as $parametro) {
-                  switch ($parametro->categoria_de_parametro_id) {
-                      case '1': // CONCENTRACION
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(48);
-                          break;
-                      case '2': // PESO ESPECÍFICO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(49);
-                          break;
-                      case '12': // ASPECTO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '13': // COLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '14': // OLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      default:
-                      $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                          break;
-                  }
-              }
-                break;
-            case '13': // Si el producto es de la categoría 13 =  EFLUENTES INDUSTRIALES
-              foreach ($producto->parametros as $parametro) {
-                  switch ($parametro->categoria_de_parametro_id) {
-                      case '43': // TEMPERATURA
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(50);
-                          break;
-                      case '28': // PH
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(51);
-                          break;
-                      case '19': // CONDUCTIVIDAD
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(52);
-                          break;
-                      case '33': // SOLIDOS SEDIMENTABLES
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(53);
-                          break;
-                      case '37': // DEMANDA QUIMICA DE OXIGENO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(54);
-                          break;
-                      case '17': // CLORO LIBRE
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(55);
-                          break;
-                      case '36': // FOSFORO TOTAL
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(56);
-                          break;
-                      case '15': // NITROGENO TOTAL
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(57);
-                          break;
-                      case '7': // SULFATOS
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(58);
-                          break;
-                      case '39': // NITRATOS
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(59);
-                          break;
-                      case '12': // ASPECTO
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '13': // COLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      case '14': // OLOR
-                          $parametro->metodo = \App\Models\MetodoDeAnalisis::find(61);
-                          break;
-                      default:
-                      $parametro->metodo = \App\Models\MetodoDeAnalisis::find(60);
-                          break;
-                  }
-              }
-                break;
+      // Definición de mapeos de categorías y sus respectivos métodos
+      $metodosPorCategoria = [
+        1 => [ // ACIDO SULFURICO
+            1 => 1,  // CONCENTRACION
+            2 => 4,  // PESO ESPECIFICO
+            4 => 2,  // HIERRO
+            7 => 3,  // SULFATOS
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        2 => [ // ACIDO CLORHIDRICO
+            1 => 5,  // CONCENTRACION
+            17 => 6, // CLORO LIBRE
+            2 => 7,  // PESO ESPECIFICO
+            4 => 8,  // HIERRO
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        3 => [ // ACIDO ACETICO
+            1 => 9,  // CONCENTRACION
+            42 => 10, // PUNTO DE SOLIDIFICACION
+            5 => 11,  // CLORUROS
+            2 => 12,  // PESO ESPECÍFICO
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        4 => [ // ACIDO NITRICO
+            1 => 13, // CONCENTRACION
+            2 => 14, // PESO ESPECIFICO
+            40 => 15, // RESIDUOS POR EVAPORACION
+            41 => 16, // PRESIDUOS POR CALCINACION
+            4 => 17, // HIERRO
+            5 => 18, // CLORURO
+            7 => 19, // SULFATOS
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        5 => [ // ACIDO FOSFORICO
+            1 => 20, // CONCENTRACION
+            2 => 21, // PESO ESPECIFICO
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        6 => [ // AGUA AMONIACAL
+            1 => 22, // CONCENTRACION
+            2 => 23, // PESO ESPECIFICO
+            5 => 24, // CLORURO
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        7 => [ // AGUA OXIGENADA
+            1 => 25, // CONCENTRACION
+            9 => 25, // VOLUMEN
+            8 => 26, // DESCOMPOSICION
+            40 => 27, // RESIDUOS POR EVAPORACION
+            2 => 28, // PESO ESPECIFICO
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        8 => [ // AGUA DESMINERALIZADA
+            5 => 29, // CLORURO
+            28 => 30, // PH
+            32 => 31, // CONDUCTIVIDAD
+            2 => 32, // PESO ESPECIFICO
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        9 => [ // HIPOCLORITO DE SODIO
+            1 => 33, // CONCENTRACION
+            11 => 34, // ALCALINIDAD
+            2 => 35, // PESO ESPECIFICO
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        10 => [ // HIDROXIDO DE SOD
+            1 => 36, // CONCENTRACION
+            2 => 37, // PESO ESPECIFICO
+            10 => 38, // CARBONATO
+            5 => 39, // CLORURO
+            7 => 40, // SULFATOS
+            6 => 41, // METALES PESADOS
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        11 => [ // HIDROXIDO DE POTASIO
+            1 => 42, // CONCENTRACION
+            2 => 43, // PESO ESPECIFICO
+            10 => 44, // CARBONATO
+            5 => 45, // CLORURO
+            7 => 46, // SULFATOS
+            6 => 47, // METALES PESADOS
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        12 => [ // CLORURO FERRICO
+            1 => 48, // CONCENTRACION
+            2 => 49, // PESO ESPECIFICO
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
+        13 => [ // EFLUENTES INDUSTRIALES
+            43 => 50, // TEMPERATURA
+            28 => 51, // PH
+            19 => 52, // CONDUCTIVIDAD
+            33 => 53, // SOLIDOS SEDIMENTABLES
+            37 => 54, // DEMAND
+            17 => 55, // CLORO LIBRE
+            36 => 56, // FOSFORO TOTAL
+            15 => 57, // NITROGENO TOTAL
+            7 => 58, // SULFATOS
+            39 => 59, // NITRATOS
+            12 => 61, // ASPECTO
+            13 => 61, // COLOR
+            14 => 61, // OLOR
+        ],
 
-            default:
-                // Otras categorías pueden ser gestionadas aquí
-                break;
-        }
+      ];
 
-        return $producto;
+      // Obtener los métodos para la categoría del producto
+      $metodosCategoria = $metodosPorCategoria[$producto->categoria_de_producto_id] ?? [];
+
+      if (!empty($metodosCategoria)) {
+          // Obtener los IDs de métodos a buscar
+          $metodoIds = array_values($metodosCategoria);
+
+          // Obtener los métodos de análisis en una sola consulta
+          $metodos = \App\Models\MetodoDeAnalisis::whereIn('metodo_de_analisis_id', $metodoIds)->get()->keyBy('metodo_de_analisis_id');
+
+          // Asignar los métodos a los parámetros del producto
+          foreach ($producto->parametros as $parametro) {
+              $metodoId = $metodosCategoria[$parametro->categoria_de_parametro_id] ?? 60; // Valor por defecto
+              $parametro->metodo = $metodos[$metodoId] ?? \App\Models\MetodoDeAnalisis::find(60);
+          }
     }
 
-
+      return $producto;
+    }
 }
 
 
