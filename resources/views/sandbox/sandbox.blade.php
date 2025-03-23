@@ -20,7 +20,7 @@
 
       <h2>Lista de productos</h2>
 
-      <table style="border-collapse: collapse; width: 60%; text-align: center; border: 1px solid black;">
+      <table style="border-collapse: collapse; width: 80%; text-align: center; border: 1px solid black;">
         <thead>
           <tr>
             <th style="border: 1px solid black; padding: 5px;">N° de producto</th>
@@ -41,15 +41,25 @@
                 @endforeach
               </td>
               <td style="border: 1px solid black; padding: 5px;">{{ $producto->nombre }}</td>
-              <td style="border: 1px solid black; padding: 5px;">
-                @foreach($producto->parametros as $parametro)
-                  <p style="margin: 0;"> {{ $parametro->parametro }}
-                    @if($parametro->valor_min) {{ $parametro->valor_min }} @endif
-                    @if($parametro->valor_max) - {{ $parametro->valor_max }} @endif
-                    @if ($parametro->referencia) - {{ $parametro->referencia }} - {{ $parametro->valor }} @endif
-                  </p>
-
-                @endforeach
+              <td>
+                <table style="width: 100%; border-collapse: collapse;">
+                    @foreach($producto->parametros as $parametro)
+                        <tr>
+                            <td style="border: 1px solid black; padding: 5px; width: 60%;">
+                                {{ $parametro->parametro }}
+                            </td>
+                            <td style="border: 1px solid black; padding: 5px; width: 15%;">
+                              {{ isset($parametro->valor_min) ? $parametro->valor_min : '' }}
+                              {{ isset($parametro->valor_max) ? ' - ' . $parametro->valor_max : '' }}
+                              {{ isset($parametro->referencia) ? ' - ' . $parametro->referencia . ' - ' . $parametro->valor : '' }}
+                            </td>
+                            <td style="border: 1px solid black; padding: 5px; width: 20%;">
+                                {{ ($parametro->metodo && $parametro->metodo->metodo_de_analisis == 'no aplica') ? '' : ($parametro->metodo ? $parametro->metodo->metodo_de_analisis : '') }}
+                            </td>
+                        </tr>
+                    @endforeach
+                </table>
+            </td>
             </tr>
           @endforeach
         </tbody>
