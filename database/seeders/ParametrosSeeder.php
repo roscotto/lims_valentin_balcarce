@@ -276,7 +276,7 @@ class ParametrosSeeder extends Seeder
           ],
           [
               'parametro_id' => 34,
-              'parametro' => 'Concentración (HNO3), % p/p.',
+              'parametro' => 'Concentración (HNO3), % p/p',
               'valor_min' => 64,
               'valor_max' => 67,
               'referencia' => null,
@@ -284,7 +284,7 @@ class ParametrosSeeder extends Seeder
           ],
           [
               'parametro_id' => 35,
-              'parametro' => 'Concentración (HNO3), % p/p.',
+              'parametro' => 'Concentración (HNO3), % p/p',
               'valor_min' => 48,
               'valor_max' => 51,
               'referencia' => null,
